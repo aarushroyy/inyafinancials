@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import Image from 'next/image';
 
@@ -17,6 +19,11 @@ const ServiceItem: React.FC<ServiceItemProps> = ({ icon, text }) => (
   </div>
 );
 
+const scrollToSection = (elementId: string) => {
+  const element = document.getElementById(elementId);
+  element?.scrollIntoView({ behavior: 'smooth' });
+};
+
 const HeroSection: React.FC = () => {
   return (
     <div className="bg-white min-h-[600px] pb-0 px-4 md:px-8 lg:px-16 pt-12 md:pt-16">
@@ -27,12 +34,18 @@ const HeroSection: React.FC = () => {
             <Link href="/" className="text-gray-600 hover:text-teal-700">
               Home
             </Link>
-            <Link href="/services" className="text-gray-600 hover:text-teal-700">
+            <button 
+              onClick={() => scrollToSection('services')} 
+              className="text-gray-600 hover:text-teal-700"
+            >
               Our Services
-            </Link>
-            <Link href="/how-it-works" className="text-gray-600 hover:text-teal-700">
+            </button>
+            <button 
+              onClick={() => scrollToSection('how-it-works')} 
+              className="text-gray-600 hover:text-teal-700"
+            >
               How it works?
-            </Link>
+            </button>
           </div>
         </div>
       </nav>
@@ -48,11 +61,15 @@ const HeroSection: React.FC = () => {
           
 
           <div className="flex flex-wrap gap-4">
-            <button className="bg-teal-800 text-l rounded-full text-white px-6 py-3 hover:bg-teal-900 transition-colors font-acidNormal">
-              Schedule a call
+          <button 
+              onClick={() => window.open('https://wa.link/2857n1', '_blank')}
+              className="bg-teal-800 text-l rounded-full text-white px-6 py-3 hover:bg-teal-900 transition-colors font-acidNormal"
+            >              Schedule a call
             </button>
             <div className="relative group">
-              <button className="border-0 text-l border-teal-800 text-teal-800 px-6 py-3 rounded-md transition-colors font-acidNormal">
+              <button 
+                  onClick={() => scrollToSection('services')} 
+              className="border-0 text-l border-teal-800 text-teal-800 px-6 py-3 rounded-md transition-colors font-acidNormal">
                 Our Services
               </button>
               <div className="absolute bottom-2 left-6 right-6 h-px bg-teal-800 scale-x-100 group-hover:scale-x-0 transition-transform duration-300 origin-left" />

@@ -9,8 +9,12 @@ export default function Home() {
     <div>
         <HeroSection />
         <ProfileCarousel />
-        <FinancialServices />
-        <HowItWorks />
+        <div id="services">
+          <FinancialServices />
+        </div>
+        <div id="how-it-works">
+          <HowItWorks />
+        </div>
         <Footer />
     </div>
   );
