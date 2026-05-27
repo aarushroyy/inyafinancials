@@ -34,6 +34,9 @@ const HeroSection: React.FC = () => {
             <Link href="/" className="text-gray-600 hover:text-teal-700">
               Home
             </Link>
+            <Link href="/insights/ay-2026-27-income-tax-return-filing" className="text-gray-600 hover:text-teal-700">
+              Insights
+            </Link>
             <button 
               onClick={() => scrollToSection('services')} 
               className="text-gray-600 hover:text-teal-700"
