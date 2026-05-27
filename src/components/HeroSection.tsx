@@ -63,20 +63,37 @@ const HeroSection: React.FC = () => {
           
           
 
-          <div className="flex flex-wrap gap-4">
-          <button 
-              onClick={() => window.open('https://wa.link/2857n1', '_blank')}
-              className="bg-teal-800 text-l rounded-full text-white px-6 py-3 hover:bg-teal-900 transition-colors font-acidNormal"
-            >              Schedule a call
-            </button>
-            <div className="relative group">
+          <div className="space-y-3">
+            <div className="flex flex-col items-start gap-3 sm:flex-row sm:flex-wrap">
               <button 
-                  onClick={() => scrollToSection('services')} 
-              className="border-0 text-l border-teal-800 text-teal-800 px-6 py-3 rounded-md transition-colors font-acidNormal">
-                Our Services
+                onClick={() => window.open('https://wa.link/2857n1', '_blank')}
+                className="bg-teal-800 text-l rounded-full text-white px-6 py-3 hover:bg-teal-900 transition-colors font-acidNormal"
+              >
+                Schedule a call
               </button>
-              <div className="absolute bottom-2 left-6 right-6 h-px bg-teal-800 scale-x-100 group-hover:scale-x-0 transition-transform duration-300 origin-left" />
+
+              <div className="relative group">
+                <button 
+                    onClick={() => scrollToSection('services')} 
+                className="border-0 text-l border-teal-800 text-teal-800 px-6 py-3 rounded-md transition-colors font-acidNormal">
+                  Our Services
+                </button>
+                <div className="absolute bottom-2 left-6 right-6 h-px bg-teal-800 scale-x-100 group-hover:scale-x-0 transition-transform duration-300 origin-left" />
+              </div>
             </div>
+
+            <Link
+              href="/insights/ay-2026-27-income-tax-return-filing"
+              className="group inline-flex w-full sm:max-w-md flex-col items-start rounded-2xl border border-teal-800/15 bg-teal-50 px-5 py-3 text-left transition-colors hover:border-teal-800/25 hover:bg-teal-100"
+            >
+              <span className="text-[11px] font-semibold uppercase tracking-[0.24em] text-teal-700/70">
+                Latest insight
+              </span>
+              <span className="mt-1 text-sm font-acidMedium text-teal-900">
+                AY 2026-27 tax filing guide
+              </span>
+              <span className="mt-2 h-px w-10 bg-teal-800 transition-all duration-300 group-hover:w-16" />
+            </Link>
           </div>
         </div>
 

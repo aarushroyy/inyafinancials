@@ -44,9 +44,9 @@ export default function Footer() {
           {/* Right Column - Contact Info */}
           <div className="flex flex-col justify-between mt-20">
             <div className="space-y-4">
-              <Link href="mailto:connect@myinya.com" className="flex items-center text-white hover:text-gray-200 transition-colors">
+              <Link href="mailto:connect@myinya.in" className="flex items-center text-white hover:text-gray-200 transition-colors">
                 <Mail className="w-6 h-6 mr-3" />
-                <span className="text-lg">connect@myinya.com</span>
+                <span className="text-lg">connect@myinya.in</span>
               </Link>
               <Link href="tel:+918882816184" className="flex items-center text-white hover:text-gray-200 transition-colors">
                 <Phone className="w-6 h-6 mr-3" />
